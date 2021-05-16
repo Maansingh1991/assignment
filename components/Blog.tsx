@@ -60,7 +60,7 @@ var Blog = (props, ref) => {
 
     const [data, setData] = useState([]);
     const [isOpen,setOpen] =  useState(false);
-    const [objModal, setObjModal] = useState({});
+    const [objModal, setObjModal] = useState({title:"", desc: ""});
 
 
     useEffect(() => {
