@@ -72,7 +72,8 @@ var Blog = (props, ref) => {
             randomBlogGenerator();
             
         }, 11000);
-        return () => clearInterval(interval);
+        return () => {clearInterval(interval);
+            clearInterval(interval1)};
     }, []);
 
 

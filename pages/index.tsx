@@ -22,7 +22,7 @@ const Home = (path) => {
       <div>
       <ul>
             <li>
-              <Link to="/">Assignment 1</Link>
+            <Link to="/">Assignment 1</Link> 
             </li>
             <li>
               <Link to="/blog">Blog</Link>

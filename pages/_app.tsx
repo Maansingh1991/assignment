@@ -7,7 +7,7 @@ import Blog from "components/Blog";
 import Index from "../pages/index";
 import { Router, Link } from "@reach/router"
 import { useNavigate } from "@reach/router"
-import { Stack,Button } from "@chakra-ui/react"
+import { Stack,Button, Box, Text } from "@chakra-ui/react"
 import { useEffect, useState } from 'react';
 
 const MyApp = ({ Component, pageProps }) => {
@@ -33,19 +33,37 @@ const LandingPage = (path) => {
 
 
   const navigate = useNavigate()
-  return (<Stack spacing={4} direction="row" align="center">
+  return (
+    <Box bg="tomato" w="100%" p={100} color="white">
+  
+  <Stack spacing={20} direction="row" align="center">
+  <Text fontSize="6xl">Please press Sign In or Sign Up</Text>
+     <Button onClick={() => {
+       navigate("signIn")
+     }} colorScheme="teal" size="lg">
+       SignIn
+   </Button>
+     <Button onClick={() => {
+       navigate("signup")
+     }} colorScheme="teal" size="lg">
+       Singup
+   </Button>
+   </Stack>
+</Box>
+  )
+  // return (<Stack spacing={4} direction="row" align="center">
 
-    <Button onClick={() => {
-      navigate("signIn")
-    }} colorScheme="teal" size="lg">
-      SignIn
-  </Button>
-    <Button onClick={() => {
-      navigate("signup")
-    }} colorScheme="teal" size="lg">
-      Singup
-  </Button>
-  </Stack>)
+  //   <Button onClick={() => {
+  //     navigate("signIn")
+  //   }} colorScheme="teal" size="lg">
+  //     SignIn
+  // </Button>
+  //   <Button onClick={() => {
+  //     navigate("signup")
+  //   }} colorScheme="teal" size="lg">
+  //     Singup
+  // </Button>
+  // </Stack>)
 }
 
 const privateRoute = () => {
